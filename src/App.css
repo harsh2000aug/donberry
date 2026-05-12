@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,
+h2,
+h3 {
+  font-family: "Newsreader", serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
+  color: #000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+li {
+  list-style: none;
+}
+
+p {
+  font-size: 16px;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.gap {
+  padding: 50px 0;
+}
+
+.col-50 {
+  width: 49%;
+}
+
+.common-text {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  margin-bottom: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.common-text h2 {
+  font-size: 48px;
+  font-style: Italic;
+  font-weight: 400;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.common-text p {
+  color: #44474c;
+  font-size: 14px;
+  letter-spacing: 1.2px;
+}
+
+@media (max-width: 767px) {
+  .gap {
+    padding: 25px 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .col-50 {
+    width: 100%;
+  }
+
+  .common-text {
+    margin-bottom: 15px;
+  }
+
+  .common-text h2 {
+    font-size: 22px;
+  }
+
+  .common-text p {
+    font-size: 10px;
   }
 }
