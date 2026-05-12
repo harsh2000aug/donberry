@@ -19,6 +19,12 @@
 }
 
 .right-side h1 {
-  font-size: 100px;
+  font-size: 128px;
+  font-weight: 400;
   font-style: italic;
+  margin-bottom: 20px;
+}
+
+.right-side p {
+  font-size: 16px;
 }

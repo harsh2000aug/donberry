@@ -12,7 +12,9 @@ const Homepage = () => {
             </div>
             <div className="right-side col-50">
               <span>MASTER OF RESONANCE</span>
-              <h1>The Sound of Shadow</h1>
+              <h1>
+                The <br /> Sound of <br /> Shadow
+              </h1>
               <p>
                 Don Barry redefined the role of the acoustic bass in modern
                 jazz. His approach focuses on the resonance of wood and the
