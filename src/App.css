@@ -38,3 +38,45 @@ p {
 .col-50 {
   width: 49%;
 }
+
+.common-text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.common-text h2 {
+  font-size: 48px;
+  font-style: Italic;
+  font-weight: 400;
+}
+
+.common-text p {
+  color: #44474c;
+  font-size: 14px;
+  letter-spacing: 1.2px;
+}
+
+@media (max-width: 767px) {
+  .gap {
+    padding: 25px 0;
+  }
+
+  .col-50 {
+    width: 100%;
+  }
+
+  .common-text {
+    margin-bottom: 15px;
+  }
+
+  .common-text h2 {
+    font-size: 22px;
+  }
+
+  .common-text p {
+    font-size: 10px;
+  }
+}
