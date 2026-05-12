@@ -27,4 +27,41 @@
 
 .right-side p {
   font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.right-side .explore-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.right-side .line {
+  width: 60px;
+  height: 2px;
+  background-color: #c4c6cc;
+}
+
+.right-side .explore-btn {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #000;
+  cursor: pointer;
+  padding: 0;
+  transition: 0.3s ease;
+}
+
+.right-side .explore-btn:hover {
+  color: #555;
+  transform: translateX(4px);
+}
+
+/* landing area css end */
+
+.latest-work {
+  background: #f3f4f5;
 }

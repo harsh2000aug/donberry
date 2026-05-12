@@ -21,7 +21,20 @@ const Homepage = () => {
                 gravity of timing, creating a foundation that breathes with the
                 ensemble.
               </p>
+              <div className="explore-wrapper">
+                <div className="line"></div>
+                <button className="explore-btn">EXPLORE MORE</button>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="gap latest-work">
+        <div className="container">
+          <div className="common-text">
+            <h1>Latest Work</h1>
+            <p>FEATURED COMPOSITION • 2024</p>
           </div>
         </div>
       </section>
