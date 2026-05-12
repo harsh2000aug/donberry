@@ -4,3 +4,21 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.left-side img {
+  width: 100%;
+  display: block;
+}
+
+.right-side span {
+  color: #e9c176;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 20px;
+  letter-spacing: 4.8px;
+}
+
+.right-side h1 {
+  font-size: 100px;
+  font-style: italic;
+}

@@ -34,3 +34,7 @@ p {
 .gap {
   padding: 50px 0;
 }
+
+.col-50 {
+  width: 49%;
+}
