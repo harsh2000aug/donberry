@@ -4,6 +4,8 @@ import Header from "./reuseable-components/Header";
 import Footer from "./reuseable-components/Footer";
 import Homepage from "./components/Homepage";
 import "./App.css";
+import Schedule from "./components/Schedule";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/schedule" element={<Schedule />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </div>

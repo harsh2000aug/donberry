@@ -39,6 +39,14 @@ p {
   width: 49%;
 }
 
+.col-33 {
+  width: 32.33%;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
 .common-text {
   display: flex;
   flex-wrap: wrap;
@@ -53,6 +61,15 @@ p {
   font-weight: 400;
 }
 
+.common-text span {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  color: #e9c176;
+  margin-bottom: 20px;
+}
+
 .common-text p {
   color: #44474c;
   font-size: 14px;
@@ -62,6 +79,10 @@ p {
 @media (max-width: 767px) {
   .gap {
     padding: 25px 0;
+  }
+
+  .mb-15 {
+    margin-bottom: 0px;
   }
 
   .col-50 {
@@ -74,6 +95,15 @@ p {
 
   .common-text h2 {
     font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .common-text h2 br {
+    display: none;
+  }
+
+  .common-text span {
+    margin-bottom: 10px;
   }
 
   .common-text p {
