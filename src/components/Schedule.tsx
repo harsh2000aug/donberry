@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { MdMail } from "react-icons/md";
 import { IoMdCall } from "react-icons/io";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import barry from "../images/barry.png";
 import barryBanner from "../images/barry-banner.png";
+import Loader from "../reuseable-components/Loader/Loader";
 
 const Schedule = () => {
   const MailIcon: any = MdMail;
@@ -70,9 +71,7 @@ const Schedule = () => {
       <section className="gap">
         <div className="container">
           <div className="calendar-wrapper">
-            {loading && (
-              <div className="calendar-loader">Loading Calendar...</div>
-            )}
+            {loading && <Loader />}
             <iframe
               src="https://calendar.google.com/calendar/embed?src=donbarrysr@gmail.com&ctz=America/New_York"
               width="100%"
