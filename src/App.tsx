@@ -6,6 +6,7 @@ import Homepage from "./components/Homepage";
 import "./App.css";
 import Schedule from "./components/Schedule";
 import Contact from "./components/Contact";
+import Music from "./components/Music";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/music" element={<Music />} />
       </Routes>
       <Footer />
     </div>
