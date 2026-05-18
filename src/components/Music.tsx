@@ -110,9 +110,6 @@ const Music = () => {
                   <h3>Beautiful Things</h3>
                   <p>The Midnight Collective • 2023</p>
                 </div>
-                <button className="play-btn">
-                  <Play />
-                </button>
               </div>
               <div className="song-footer">
                 <div className="platforms">
@@ -170,9 +167,6 @@ const Music = () => {
                   <h3>Beautiful Things</h3>
                   <p>The Midnight Collective • 2023</p>
                 </div>
-                <button className="play-btn">
-                  <Play />
-                </button>
               </div>
               <div className="song-footer">
                 <div className="platforms">
@@ -230,9 +224,6 @@ const Music = () => {
                   <h3>Beautiful Things</h3>
                   <p>The Midnight Collective • 2023</p>
                 </div>
-                <button className="play-btn">
-                  <Play />
-                </button>
               </div>
               <div className="song-footer">
                 <div className="platforms">
@@ -290,9 +281,6 @@ const Music = () => {
                   <h3>Beautiful Things</h3>
                   <p>The Midnight Collective • 2023</p>
                 </div>
-                <button className="play-btn">
-                  <Play />
-                </button>
               </div>
               <div className="song-footer">
                 <div className="platforms">
