@@ -14,7 +14,6 @@ const Loader = ({ loading }: any) => {
             <span className="note note3">♬</span>
             <span className="note note4">♫</span>
           </div>
-          <h2>Loading Upcoming Events...</h2>
         </div>
       )}
     </>
