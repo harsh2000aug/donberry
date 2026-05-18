@@ -11,8 +11,9 @@ header nav {
 }
 
 nav .logo img {
-  width: 120px;
+  width: 90px;
   display: block;
+  cursor: pointer;
 }
 
 .hf-nav-menu ul {
@@ -92,7 +93,7 @@ footer {
 }
 
 footer .logo img {
-  width: 120px;
+  width: 90px;
   display: block;
 }
 
