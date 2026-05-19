@@ -532,7 +532,7 @@
 }
 
 .inq-group {
-  margin-bottom: 34px;
+  margin-bottom: 20px;
 }
 
 .inq-group label {
@@ -660,15 +660,28 @@
   transform: translateY(-5px);
 }
 
+.news-card p {
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-card p svg {
+  margin-right: 5px;
+}
+
 .image-wrapper {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
+  margin-bottom: 10px;
 }
 
 .news-image {
   width: 100%;
-  height: 250px;
+  height: 310px;
   object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
@@ -684,7 +697,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: end;
@@ -721,7 +734,7 @@
 }
 
 .release-slider .swiper-pagination-bullet-active {
-  background: #e9c176;
+  background: #f59e0b;
   opacity: 1;
 }
 
@@ -1118,6 +1131,7 @@
   align-items: center;
   gap: 8px;
   position: relative;
+  cursor: pointer;
 }
 
 .platform-icon {
@@ -1128,6 +1142,18 @@
   align-items: center;
   justify-content: center;
   color: #fff;
+}
+
+.platform-icon a {
+  display: inline-flex;
+}
+
+.platform-icon a svg {
+  color: #fff;
+}
+
+.platform-icon-amazon svg {
+  color: #000 !important;
 }
 
 .dropdown-btn {
@@ -1148,8 +1174,8 @@
 
 .platform-dropdown {
   position: absolute;
-  left: 69px;
-  bottom: -165px;
+  left: 100px;
+  bottom: -134px;
   width: 160px;
   background: #fff;
   border-radius: 12px;
@@ -1159,24 +1185,29 @@
   visibility: hidden;
   transition: 0.3s ease;
   z-index: 10;
+  height: 250px;
+  max-height: fit-content;
+  overflow-y: scroll;
 }
 
-.platform-dropdown p {
+.platform-dropdown a {
   padding: 8px 0;
   font-size: 14px;
   color: #333;
   cursor: pointer;
+  display: block;
 }
 
-.platform-dropdown p svg {
+.platform-dropdown a svg {
   margin-right: 5px;
 }
 
-.platform-dropdown p:hover {
+.platform-dropdown a:hover {
   color: #5038ff;
 }
 
-.platforms:hover .platform-dropdown {
+.dropdown-btn:hover + .platform-dropdown,
+.platform-dropdown:hover {
   opacity: 1;
   visibility: visible;
 }
@@ -1240,6 +1271,20 @@
 
   .song-content h3 {
     font-size: 14px;
+  }
+
+  .video-wrapper iframe {
+    width: 360px;
+    height: 180px;
+  }
+
+  .close-btn {
+    top: -11px;
+    right: 0px;
+    font-size: 14px;
+    width: 25px;
+    height: 25px;
+    font-weight: 700;
   }
 }
 /* music page css end */
