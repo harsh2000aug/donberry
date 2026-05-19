@@ -10,6 +10,7 @@ import axios from "axios";
 import { contact } from "../store/Services/AllApi";
 import { toast } from "react-toastify";
 import Loader from "../reuseable-components/Loader/Loader";
+import { Link } from "react-router-dom";
 
 type FormData = {
   fullName: string;
@@ -135,16 +136,31 @@ const Contact = () => {
                 </form>
                 <div className="social-media">
                   <div className="col-33 icons">
-                    <Spotify />
-                    <span>Spotify</span>
+                    <Link
+                      to="https://open.spotify.com/artist/73FeWZD82LSc3sauibguIO"
+                      target="_blank"
+                    >
+                      <Spotify />
+                      <span>Spotify</span>
+                    </Link>
                   </div>
                   <div className="col-33 icons">
-                    <Youtube />
-                    <span>Youtube</span>
+                    <Link
+                      to="https://www.youtube.com/channel/UC7s2pITvY7O8XTbsvRVlVxw"
+                      target="_blank"
+                    >
+                      <Youtube />
+                      <span>Youtube</span>
+                    </Link>
                   </div>
                   <div className="col-33 icons">
-                    <Instagram />
-                    <span>Instagram</span>
+                    <Link
+                      to="https://www.instagram.com/donbarry02038"
+                      target="_blank"
+                    >
+                      <Instagram />
+                      <span>Instagram</span>
+                    </Link>
                   </div>
                 </div>
               </div>
