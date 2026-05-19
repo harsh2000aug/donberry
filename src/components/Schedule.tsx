@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdMail } from "react-icons/md";
 import { IoMdCall } from "react-icons/io";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FaMusic } from "react-icons/fa6";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -10,7 +11,7 @@ import barry from "../images/barry.png";
 import barryBanner from "../images/barry-banner.png";
 import Loader from "../reuseable-components/Loader/Loader";
 import { useForm } from "react-hook-form";
-import { enquiryForm } from "../store/Services/AllApi";
+import { enquiryForm, tracks } from "../store/Services/AllApi";
 import { toast } from "react-toastify";
 
 type FormData = {
@@ -26,10 +27,12 @@ type FormData = {
 const Schedule = () => {
   const MailIcon: any = MdMail;
   const CallIcon: any = IoMdCall;
+  const Play: any = FaMusic;
 
   const [currentEmbedUrl, setCurrentEmbedUrl]: any = useState("");
   const [loader, setLoader] = useState(true);
   const [loading, setLoading] = useState<Boolean>(false);
+  const [latestRelease, setlatestRelease]: any = useState([]);
 
   const closeModal = () => {
     setCurrentEmbedUrl("");
@@ -72,6 +75,16 @@ const Schedule = () => {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    tracks()
+      .then((res: any) => {
+        setlatestRelease(res?.data);
+      })
+      .catch((error) => {
+        toast.error(JSON.stringify(error));
+      });
+  }, []);
 
   return (
     <div>
@@ -291,81 +304,89 @@ const Schedule = () => {
               }}
               className="release-slider"
             >
-              <SwiperSlide>
-                <div
-                  className="news-card"
-                  onClick={() =>
-                    handlePlay("https://www.youtube.com/embed/UWnskuxP6T4")
-                  }
-                >
-                  <div className="image-wrapper">
-                    <img src={barry} className="news-image" />
-                    <div className="overlay">
-                      <span>Click to Play</span>
+              {latestRelease?.map((itm: any) => (
+                <SwiperSlide key={itm?.id}>
+                  <div
+                    className="news-card"
+                    onClick={() => handlePlay(itm?.embed_url)}
+                  >
+                    <div className="image-wrapper">
+                      <img src={itm?.thumbnail} className="news-image" />
+                      <div className="overlay">
+                        <span>Click to Play</span>
+                      </div>
                     </div>
+                    <p>
+                      <Play />
+                      {itm?.title}
+                    </p>
                   </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  className="news-card"
-                  onClick={() =>
-                    handlePlay("https://www.youtube.com/embed/UWnskuxP6T4")
-                  }
-                >
-                  <div className="image-wrapper">
-                    <img src={barry} className="news-image" />
-                    <div className="overlay">
-                      <span>Click to Play</span>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  className="news-card"
-                  onClick={() =>
-                    handlePlay("https://www.youtube.com/embed/UWnskuxP6T4")
-                  }
-                >
-                  <div className="image-wrapper">
-                    <img src={barry} className="news-image" />
-                    <div className="overlay">
-                      <span>Click to Play</span>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  className="news-card"
-                  onClick={() =>
-                    handlePlay("https://www.youtube.com/embed/UWnskuxP6T4")
-                  }
-                >
-                  <div className="image-wrapper">
-                    <img src={barry} className="news-image" />
-                    <div className="overlay">
-                      <span>Click to Play</span>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  className="news-card"
-                  onClick={() =>
-                    handlePlay("https://www.youtube.com/embed/UWnskuxP6T4")
-                  }
-                >
-                  <div className="image-wrapper">
-                    <img src={barry} className="news-image" />
-                    <div className="overlay">
-                      <span>Click to Play</span>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
+                </SwiperSlide>
+              ))}
+              {/* <SwiperSlide>
+                          <div
+                            className="news-card"
+                            onClick={() =>
+                              handlePlay("https://www.youtube.com/embed/UWnskuxP6T4")
+                            }
+                          >
+                            <div className="image-wrapper">
+                              <img src={musician} className="news-image" />
+                              <div className="overlay">
+                                <span>Click to Play</span>
+                              </div>
+                            </div>
+                            <p>
+                              <Play />
+                              Beer Church Tonight
+                            </p>
+                          </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <div
+                            className="news-card"
+                            onClick={() =>
+                              handlePlay("https://www.youtube.com/embed/UWnskuxP6T4")
+                            }
+                          >
+                            <div className="image-wrapper">
+                              <img src={musician} className="news-image" />
+                              <div className="overlay">
+                                <span>Click to Play</span>
+                              </div>
+                            </div>
+                          </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <div
+                            className="news-card"
+                            onClick={() =>
+                              handlePlay("https://www.youtube.com/embed/UWnskuxP6T4")
+                            }
+                          >
+                            <div className="image-wrapper">
+                              <img src={musician} className="news-image" />
+                              <div className="overlay">
+                                <span>Click to Play</span>
+                              </div>
+                            </div>
+                          </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <div
+                            className="news-card"
+                            onClick={() =>
+                              handlePlay("https://www.youtube.com/embed/UWnskuxP6T4")
+                            }
+                          >
+                            <div className="image-wrapper">
+                              <img src={musician} className="news-image" />
+                              <div className="overlay">
+                                <span>Click to Play</span>
+                              </div>
+                            </div>
+                          </div>
+                        </SwiperSlide> */}
             </Swiper>
           </div>
         </div>

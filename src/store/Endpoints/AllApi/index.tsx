@@ -16,4 +16,18 @@ export const allApi = {
       uri: "/enquiry/",
     },
   },
+  tracks: {
+    v1: {
+      ...defaults.methods.GET,
+      ...defaults.versions.v1,
+      uri: "/tracks/",
+    },
+  },
+  songs: {
+    v1: {
+      ...defaults.methods.GET,
+      ...defaults.versions.v1,
+      uri: "/songs/",
+    },
+  },
 };

@@ -11,3 +11,11 @@ export const enquiryForm = ({ body }: any) =>
     uriEndPoint: allApi.enquiryForm.v1,
     body,
   });
+export const tracks = () =>
+  callApi({
+    uriEndPoint: allApi.tracks.v1,
+  });
+export const songs = () =>
+  callApi({
+    uriEndPoint: allApi.songs.v1,
+  });
