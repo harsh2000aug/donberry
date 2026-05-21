@@ -168,102 +168,15 @@
 }
 /* latest work css end */
 
-.st-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.st-section {
+  background: #261900;
 }
 
-.st-left {
-  width: 29%;
-}
-
-.st-heading {
-  font-size: 60px;
-  line-height: 0.9;
-  color: #000;
+.st-section .right-side h2 {
+  color: #ffdea5;
+  font-size: 72px;
   font-weight: 400;
   font-style: italic;
-}
-
-.st-right {
-  width: 69%;
-  display: flex;
-  flex-direction: column;
-  gap: 65px;
-}
-
-.st-tour-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.st-date h3 {
-  font-size: 30px;
-  font-weight: 400;
-  color: #db8f00;
-  font-style: italic;
-}
-
-.st-info {
-  flex: 1;
-}
-
-.st-info span {
-  font-size: 20px;
-  color: #191c1d;
-  display: block;
-  font-weight: 700;
-  margin-bottom: 5px;
-}
-
-.st-info p {
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #44474c;
-}
-
-.st-actions {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-
-.st-soldout-btn {
-  border: none;
-  background: #6d86a5;
-  color: #d1e4ff;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 10px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.st-ticket-btn {
-  border: none;
-  background: transparent;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #000;
-  border-bottom: 1px solid #e9c176;
-  padding-bottom: 4px;
-  cursor: pointer;
-  font-weight: 700;
-}
-
-.st-details {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #74777d;
-  cursor: pointer;
 }
 /* ticket css end */
 .newsletter {

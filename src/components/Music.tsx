@@ -9,12 +9,8 @@ import release from "../images/release.png";
 import { FaMusic } from "react-icons/fa6";
 import { FaSpotify } from "react-icons/fa";
 import { SiYoutubemusic } from "react-icons/si";
-import { SiTidal } from "react-icons/si";
-import { FaDeezer } from "react-icons/fa";
-import { FaSoundcloud } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa6";
 import { songs, tracks } from "../store/Services/AllApi";
-import { error } from "console";
 import { toast } from "react-toastify";
 import { AiOutlineAmazon } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -24,9 +20,6 @@ const Music = () => {
   const Spotify: any = FaSpotify;
   const AppleMusic: any = AiOutlineAmazon;
   const Youtubemusic: any = SiYoutubemusic;
-  const Tidal: any = SiTidal;
-  const Deezer: any = FaDeezer;
-  const Soundcloud: any = FaSoundcloud;
   const ChevronDown: any = FaChevronDown;
 
   const [currentEmbedUrl, setCurrentEmbedUrl]: any = useState("");

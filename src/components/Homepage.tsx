@@ -1,5 +1,6 @@
 import React from "react";
 import donberry from "../images/landing-page.png";
+import guitar from "../images/guitar.png";
 import { FaPlay } from "react-icons/fa";
 import "./style.css";
 
@@ -78,64 +79,20 @@ const Homepage = () => {
 
       <section className="gap st-section">
         <div className="container">
-          <div className="st-wrapper">
-            <div className="st-left">
-              <h2 className="st-heading">
-                The 2024 <br />
-                Score Tour.
-              </h2>
+          <div className="landing-area">
+            <div className="right-side col-50">
+              <span>SPECIAL CONTRIBUTION</span>
+              <h2>Master of the Low End</h2>
+              <p>
+                Known for his impeccable timing and rich, woody tone, Don Barry
+                has been the foundational heartbeat for some of the most
+                influential jazz recordings of the decade. Explore the albums
+                where his bass performance takes center stage.
+              </p>
             </div>
-            <div className="st-right">
-              <div className="st-tour-box">
-                <div className="st-date">
-                  <h3>Oct 12</h3>
-                </div>
-                <div className="st-info">
-                  <span>Blue Note</span>
-                  <p>NEW YORK, NY</p>
-                </div>
-                <div className="st-actions">
-                  <button className="st-soldout-btn">Sold Out</button>
-                  <span className="st-details">Details</span>
-                </div>
-              </div>
-              <div className="st-tour-box">
-                <div className="st-date">
-                  <h3>Oct 15</h3>
-                </div>
-                <div className="st-info">
-                  <span>The Village Vanguard</span>
-                  <p>NEW YORK, NY</p>
-                </div>
-                <div className="st-actions">
-                  <button className="st-ticket-btn">Get Tickets</button>
-                  <span className="st-details">Details</span>
-                </div>
-              </div>
-              <div className="st-tour-box">
-                <div className="st-date">
-                  <h3>Nov 02</h3>
-                </div>
-                <div className="st-info">
-                  <span>Symphony Hall</span>
-                  <p>BOSTON, MA</p>
-                </div>
-                <div className="st-actions">
-                  <button className="st-ticket-btn">Get Tickets</button>
-                  <span className="st-details">Details</span>
-                </div>
-              </div>
+            <div className="left-side col-50">
+              <img src={guitar} alt="" />
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="gap">
-        <div className="container">
-          <div className="newsletter">
-            <h2>Receive the silence.</h2>
-            <input type="email" placeholder="Enter Email Address" />
-            <p>JOIN THE CIRCLE</p>
           </div>
         </div>
       </section>
